@@ -34,7 +34,7 @@
                     <p><%=notita.cuerpo%></p>
                     <div class="edit">
                         <a href= <%='/detail/' + notita.id +'/'%> ><i class="far fa-edit"></i></a>
-                        <form action="">
+                        <form method="POST" action=<%= '/' + notita.id +'?_method=DELETE' %>>
                             <button type="submit"><i class="far fa-trash-alt"></i></button>
                         </form>
                     </div>

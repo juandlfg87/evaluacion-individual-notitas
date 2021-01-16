@@ -16,5 +16,12 @@ module.exports = {
             titulo:req.body.title,
             cuerpo:req.body.cuerpo})
         .then(res.redirect('/'))
+    },
+
+    indexDelete: function(req, res, next){
+            db.notita.destroy({
+                where: { id:req.params.id }
+            })
+            .then(res.redirect('/'))
     }
 }
