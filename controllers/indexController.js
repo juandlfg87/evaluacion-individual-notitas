@@ -2,12 +2,19 @@ const path = require('path');
 const db = require(path.join('..','db','models'));
 
 module.exports = {
-    index: function(req, res, next){
-        //res.render('index', {notitas: [1,2,3]});
+    indexGet: function(req, res, next){
         db.notita.findAll().then(
             resultados => {
                 res.render('index',{notitas: resultados})
             }
         )
+    },
+
+    indexPost: function(req, res, next){
+        //creo el objeto, parece que el css esta atado al name.
+        db.notita.create({
+            titulo:req.body.title,
+            cuerpo:req.body.cuerpo})
+        .then(res.redirect('/'))
     }
 }

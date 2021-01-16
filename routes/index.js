@@ -4,6 +4,8 @@ var path = require('path');
 const indexController = require (path.join('..', 'controllers','indexController.js'));
 
 /* GET home page. */
-router.get('/', indexController.index);
+router.get('/', indexController.indexGet);
+
+router.post('/', indexController.indexPost);
 
 module.exports = router;
