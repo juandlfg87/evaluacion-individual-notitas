@@ -28,26 +28,18 @@
             </form>
         </section>
         <section class="list">
-            <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
-                <div class="edit">
-                    <a href="#"><i class="far fa-edit"></i></a>
-                    <form action="">
-                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                    </form>
+            <% for(notita of notitas) {%>
+                <div class="note">
+                    <h2><%=notita.titulo%></h2>
+                    <p><%=notita.cuerpo%></p>
+                    <div class="edit">
+                        <a href= <%='/edit/' + notita.id%> ><i class="far fa-edit"></i></a>
+                        <form action="">
+                            <button type="submit"><i class="far fa-trash-alt"></i></button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
-                <div class="edit">
-                    <a href="#"><i class="far fa-edit"></i></a>
-                    <form action="">
-                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                    </form>
-                </div>
-            </div>
+            <%}%>
         </section>
     </main>
 
