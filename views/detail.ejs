@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notitas</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
 
@@ -25,11 +25,11 @@
             <form action="">
                 <div>
                     <label for="">Título</label>
-                    <input type="text" name="title">
+                    <input type="text" name="title" value=<%= notita.titulo %>>
                 </div>
                 <div>
                     <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" ><%= notita.cuerpo %></textarea>
                 </div>
                 <button type="submit">Editar</button>
             </form>

@@ -4,6 +4,6 @@ var path = require('path');
 const detailController = require (path.join('..', 'controllers','detailController.js'));
 
 /* GET users listing. */
-router.get('/', detailController.detail);
+router.get('/:id', detailController.detailGet);
 
 module.exports = router;

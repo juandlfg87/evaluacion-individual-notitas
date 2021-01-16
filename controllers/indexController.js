@@ -7,7 +7,6 @@ module.exports = {
         db.notita.findAll().then(
             resultados => {
                 res.render('index',{notitas: resultados})
-                console.log(resultados)
             }
         )
     }
