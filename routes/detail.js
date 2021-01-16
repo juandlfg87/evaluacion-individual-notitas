@@ -5,5 +5,6 @@ const detailController = require (path.join('..', 'controllers','detailControlle
 
 /* GET users listing. */
 router.get('/:id', detailController.detailGet);
+router.put('/:id', detailController.detailPut);
 
 module.exports = router;
