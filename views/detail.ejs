@@ -22,10 +22,10 @@
     <main>
         <section class="editForm">
             <h1>Editar una nota</h1>
-            <form action=<%= '/detail/' + notita.id +'?_method=PUT' %> method="POST">
+            <form action="<%= '/detail/' + notita.id +'?_method=PUT' %>" method="POST">
                 <div>
                     <label for="">Título</label>
-                    <input type="text" name="title" value=<%= notita.titulo %>>
+                    <input type="text" name="title" value="<%= notita.titulo %>">
                 </div>
                 <div>
                     <label for="message">Mensaje</label>

@@ -5,6 +5,7 @@ module.exports = {
     detailGet: function (req, res, next) {
         db.notita.findByPk(req.params.id).then(
             resultados => {
+                console.log(resultados.titulo)
                 res.render('detail', { notita: resultados })
             }
         )
